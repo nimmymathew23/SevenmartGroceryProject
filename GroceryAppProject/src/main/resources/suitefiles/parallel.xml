@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ParalleltestRunning" thread-count="4" parallel="tests">
+	<listeners>
+		<listener class-name="utilities.ExtentReport" />
+	</listeners>
+	<test name="LoginTestCases">
+		<classes>
+			
+			<class name="testCases.LoginTestCases"></class>
+			<class name="testCases.HomePageTestCases"></class>
+		</classes>
+	</test>
+	<test name="AdminTestcases">
+		<classes>
+			<class name="testCases.ExpenseCategoryTestCases"></class>
+			<class name="testCases.AdminUserTestCases"></class>
+		
+		</classes>
+	</test>
+	<test name="ManageTestCases">
+		<classes>
+			<class name="testCases.ManageExpensesTestCases"></class>
+			<class name="testCases.ManageProductTestCases"></class>
+		
+		</classes>
+	</test>
+</suite>

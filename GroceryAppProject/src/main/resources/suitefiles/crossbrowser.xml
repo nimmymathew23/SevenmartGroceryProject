@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="CrossBrowsinTesting" thread-count="4" parallel="tests">
+	<listeners>
+		<listener class-name="utilities.ExtentReport" />
+	</listeners>
+	<test name="Running in chrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="testCases.AdminUserTestCases"></class>
+			<class name="testCases.LoginTestCases"></class>
+			<class name="testCases.HomePageTestCases"></class>
+		</classes>
+	</test>
+	<test name="Running in Edge">
+		<parameter name="browser" value="edge"></parameter>
+		<classes>
+			<class name="testCases.AdminUserTestCases"></class>
+			<class name="testCases.LoginTestCases"></class>
+			<class name="testCases.HomePageTestCases"></class>
+		</classes>
+	</test>
+	<test name="Running in firefox">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="testCases.AdminUserTestCases"></class>
+			<class name="testCases.LoginTestCases"></class>
+			<class name="testCases.HomePageTestCases"></class>
+		</classes>
+	</test>
+</suite>
