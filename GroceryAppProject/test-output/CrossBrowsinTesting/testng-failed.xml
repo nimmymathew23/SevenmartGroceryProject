@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="tests" name="Failed suite [CrossBrowsinTesting]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utilities.ExtentReport"/>
+  </listeners>
+  <test thread-count="4" parallel="tests" name="Running in firefox(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="testCases.AdminUserTestCases">
+        <methods>
+          <include name="launch_Browser"/>
+          <include name="verifyCreateNewUser"/>
+          <include name="verifyAdminUserPageURL"/>
+          <include name="verifyAdminUserPageTitle"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.AdminUserTestCases -->
+      <class name="testCases.LoginTestCases">
+        <methods>
+          <include name="launch_Browser"/>
+          <include name="verifyLoginForValidUser"/>
+          <include name="verifyLoginForInValidUser"/>
+          <include name="verifySignInButtonText"/>
+          <include name="verifyCheckBox"/>
+          <include name="verifyLoginForInValidUserwithExcelDataProvider"/>
+          <include name="verifySignInButtonColor"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.LoginTestCases -->
+      <class name="testCases.HomePageTestCases">
+        <methods>
+          <include name="launch_Browser"/>
+          <include name="verifyUserLogout"/>
+          <include name="verifyHomePageTitle"/>
+          <include name="verifyHomePageURL"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.HomePageTestCases -->
+    </classes>
+  </test> <!-- Running in firefox(failed) -->
+  <test thread-count="4" parallel="tests" name="Running in Edge(failed)">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="testCases.AdminUserTestCases">
+        <methods>
+          <include name="launch_Browser"/>
+          <include name="verifyCreateNewUser"/>
+          <include name="verifyAdminUserPageURL"/>
+          <include name="verifyAdminUserPageTitle"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.AdminUserTestCases -->
+      <class name="testCases.LoginTestCases">
+        <methods>
+          <include name="launch_Browser"/>
+          <include name="verifyLoginForValidUser"/>
+          <include name="verifyLoginForInValidUser"/>
+          <include name="verifySignInButtonText"/>
+          <include name="verifyLoginForInValidUserwithExcelDataProvider"/>
+          <include name="verifySignInButtonColor"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.LoginTestCases -->
+      <class name="testCases.HomePageTestCases">
+        <methods>
+          <include name="launch_Browser"/>
+          <include name="verifyUserLogout"/>
+          <include name="verifyHomePageTitle"/>
+          <include name="verifyHomePageURL"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.HomePageTestCases -->
+    </classes>
+  </test> <!-- Running in Edge(failed) -->
+  <test thread-count="4" parallel="tests" name="Running in chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testCases.AdminUserTestCases">
+        <methods>
+          <include name="launch_Browser"/>
+          <include name="verifyCreateNewUser"/>
+          <include name="verifyAdminUserPageTitle"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.AdminUserTestCases -->
+      <class name="testCases.LoginTestCases">
+        <methods>
+          <include name="launch_Browser"/>
+          <include name="verifyLoginForInValidUser"/>
+          <include name="verifyLoginForInValidUserwithExcelDataProvider" invocation-numbers="0 1 2 3"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.LoginTestCases -->
+    </classes>
+  </test> <!-- Running in chrome(failed) -->
+</suite> <!-- Failed suite [CrossBrowsinTesting] -->

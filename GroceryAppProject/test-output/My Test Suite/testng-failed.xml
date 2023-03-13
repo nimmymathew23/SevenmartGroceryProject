@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Failed suite [My Test Suite]">
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="utilities.ExtentReport"/>
+  </listeners>
+  <test thread-count="1" parallel="tests" name="My Test(failed)">
+    <classes>
+      <class name="testCases.ManageExpensesTestCases">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="verifyAddNewExpenseRecord"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.ManageExpensesTestCases -->
+      <class name="testCases.ExpenseCategoryTestCases">
+        <methods>
+          <include name="EditExpenseCategory"/>
+          <include name="deleteExpenseCategory"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="searchExpenseCategory"/>
+        </methods>
+      </class> <!-- testCases.ExpenseCategoryTestCases -->
+      <class name="testCases.LoginTestCases">
+        <methods>
+          <include name="verifyLoginForInValidUser"/>
+          <include name="verifyLoginForInValidUserwithExcelDataProvider" invocation-numbers="0 1 2 3"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.LoginTestCases -->
+    </classes>
+  </test> <!-- My Test(failed) -->
+</suite> <!-- Failed suite [My Test Suite] -->
